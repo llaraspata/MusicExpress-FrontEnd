@@ -1,0 +1,59 @@
+<app-extract-playlist></app-extract-playlist>
+<div class="content">
+    <div class="left-side">
+        <section class="playlist-card">
+            <h2 class="playlist-card-heading">Your tastes</h2>
+            <p class="playlist-card-paragraphe">Choose a playlist that represents your tastes</p>
+            <section class="playlist-card-dropdown">
+                <form>
+                    <select  class="playlist-dropdown" #filter>
+                        @for (songName of songsNames; track songName)
+                        {
+                            <option value="{{ songName }}">{{ songName }}</option>
+                        }
+                    </select>
+                </form>
+            </section>
+            
+        </section>
+        
+        <section class="playlist-card">
+            <h2 class="playlist-card-heading">Get recommendations</h2>
+            <p class="playlist-card-paragraphe">Choose a playlist from which get recommendations</p>
+            <section class="playlist-card-dropdown">
+                <form>
+                    <select  class="playlist-dropdown" #filter>
+                        @for (songName of songsNames; track songName)
+                        {
+                            <option value="{{ songName }}">{{ songName }}</option>
+                        }
+                    </select>
+                </form>
+            </section>
+        </section>
+    </div>
+
+    <div class="right-side">
+        <section class="recommendation-card">
+            <h2 class="recommendation-card-heading">Recommended songs</h2>
+            <p class="recommendation-card-paragraphe">Select the songs you liked</p>
+            <ul class="recommendation-card-list">
+                @for (songName of songsNames.slice(0, 5); track songName)
+                {
+                    <li class="recommendation-item" value="{{ songName }}">
+                        <div>
+                          <span class="recommendation-card-checkbox"></span>
+                          {{ songName }}
+                        
+                        <p>artist name</p>
+                        </div>
+                    </li>
+                }
+            </ul>
+            
+            <h2 class="recommendation-card-accuracy">Accuracy: <span style="color: white;">{{ accuracy }}%</span></h2>
+
+        </section>
+        
+    </div>
+</div>

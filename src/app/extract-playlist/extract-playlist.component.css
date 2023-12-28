@@ -1,0 +1,187 @@
+
+h1 {
+  font-size: 2.5rem;
+  color: var(--gray-900);
+  font-weight: 500;
+  line-height: 100%;
+  letter-spacing: -0.125rem;
+  margin: 0;
+}
+
+.content {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  max-width: 700px;
+  margin-top: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+.content h1 {
+  margin-top: 1.75rem;
+}
+
+.content p {
+  margin-top: 1.5rem;
+}
+
+.divider {
+  width: 5px;
+  background: var(--accent-color);
+}
+
+h2 {
+  font-size: 2rem;
+  color: var(--secondary-color);
+  font-weight: 500;
+  line-height: 100%;
+  letter-spacing: -0.125rem;
+  margin: 0;
+}
+.content h2 {
+  margin-top: 1.75rem;
+}
+
+button {
+  padding: 8px 10px 8px 10px;
+  border: solid 1px var(--primary-color);
+  background: var(--primary-color);
+  color: white;
+  font-size: 1.0rem;
+  border-radius: 30px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+button:hover {
+  background-color:var(--hover-color);
+  border: solid 1px var(--hover-color);
+  color: white;
+}
+
+button:active {
+  background-color: var(--accent-color);
+  border: solid 1px var(--primary-color);
+  color: var(--primary-color);
+}
+
+.form-with-space {
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* Adjust the value as needed to control the spacing */
+}
+
+.extract-card-form {
+  align-items: center; /* Center vertically */
+  padding: 10px 30px 20px 30px;
+}
+
+.extract-form {
+  background: white;
+  border: 2px solid var(--primary-color);
+  font-size: 1.0rem;
+  border-radius: 0.5rem;
+}
+
+.extract-card {
+  align-items: center; /* Center vertically */
+  background: var(--extract-color);
+  border-radius: 30px;
+  padding-bottom: 30px;
+  width: 130%;
+}
+
+.extract-card-heading {
+  align-items: center; /* Center vertically */
+  color: var(--secondary-color);
+  padding: 0 30px 0 30px;
+  font-weight: bold;
+}
+
+.extract-card-paragraphe {
+  align-items: center; /* Center vertically */
+  color: var(--description-color);
+  padding: 0 30px 0 30px;
+  font-size: 1.0rem;
+}
+
+.extract-card-dropdown {
+  align-items: center; /* Center vertically */
+  padding: 10px 30px 0 30px;
+}
+
+.playlist-dropdown {
+  background: white;
+  border: 2px solid var(--primary-color);
+  font-size: 1.0rem;
+  border-radius: 0.5rem;
+}
+
+.recommendation-card {
+  align-items: center; /* Center vertically */
+  background: var(--rec-color);
+  border-radius: 30px;
+  padding-bottom: 30px;
+  width: 150%;
+}
+
+.recommendation-card-heading {
+  align-items: center; /* Center vertically */
+  color: white;
+  padding: 20px 30px 0 30px;
+  font-weight: bold;
+}
+
+.recommendation-card-paragraphe {
+  align-items: center; /* Center vertically */
+  color: white;
+  padding: 0 30px 0 30px;
+  font-size: 1.0rem;
+}
+
+.recommendation-card-list {
+  align-items: flex-start; /* Center vertically */
+  list-style-type: none; /* Remove default list-style-type (disc) */
+  display: inline-block;
+  color: white;
+  padding: 30px 30px 0 30px;
+  line-height: 100%;
+  font-size: 1.5rem; 
+}
+
+.recommendation-card-checkbox {
+  margin-right: 10px;
+  list-style-type: none; /* Remove default list-style-type (disc) */
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  background-color: var(--primary-color);
+  border-radius: 50%;
+  text-align: center; /* Center the checkmark within the circle */
+  align-items: center; /* Center vertically */
+  color: white;
+  font-size: 14px;
+  line-height: 100%;
+}
+
+.recommendation-card-checkbox::before {
+  content: '\2713'; /* Unicode character for a checkmark */
+  font-size: 40px;
+  text-align: center; /* Center the checkmark within the circle */
+  align-items: center; /* Center vertically */
+}
+
+.recommendation-item {
+  align-items: center; /* Center vertically */
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.horizontal-divider {
+  border-top: 1px solid var(--primary-color);
+  margin: 30px 0;
+}
+.vertical-divider {
+  border-left: 1px solid var(--primary-color);
+  height: 100%;
+  margin: 0 10px;
+}
