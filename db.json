@@ -1,0 +1,53 @@
+{
+    "playlists": [
+        {
+            "id": "2YRe7HRKNRvXdJBp9nXFza",
+            "name": "Spotify's Most Played All-Time [Updated Weekly]  Most Streamed  Top Played  500Mil+"
+        },
+        {
+            "id": "3fSsw9Mp5Mi2DDiweZggtP",
+            "name": "keep grinding."
+        },
+        {
+            "id": "2",
+            "name": "smth."
+        },
+        {
+            "id": "3",
+            "name": "chill & late night"
+        }
+    ],
+
+    "recommended": [
+        {
+            "id": 0,
+            "name": "Perfect strangers",
+            "artist": "Jonas Blue",
+            "preview": "https://p.sc"
+        },
+        {
+            "id": 1,
+            "name": "Wonderwall - Remastered",
+            "artist": "Oasis",
+            "preview": "https://p.sc"
+        },
+        {
+            "id": 2,
+            "name": "Last resort",
+            "artist": "Papa Roach",
+            "preview": "https://p.sc"
+        },
+        {
+            "id": 3,
+            "name": "Ligth it up",
+            "artist": "Major Lazer",
+            "preview": "https://p.sc"
+        },
+        {
+            "id": 4,
+            "name": "DYWTYLM",
+            "artist": "Sleep Token",
+            "preview": "https://sleep-token.com/"
+        }
+    ]
+}

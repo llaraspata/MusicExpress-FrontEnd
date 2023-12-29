@@ -1,0 +1,39 @@
+:host {
+  --content-padding: 10px;
+}
+
+header {
+  display: flex;
+  align-items: center; /* Center vertically */
+  justify-content: center; /* Center horizontally */  
+  height: 60px;
+  padding: var(--content-padding);
+  box-shadow: 0px 5px 25px var(--shadow-color);
+  text-decoration: none;
+}
+
+.content {
+  padding: var(--content-padding);
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+}
+
+.brand-name {
+  background-color: var(--primary-color);
+}
+
+header.brand-name a {
+  padding-left: 20px;
+  text-decoration: none;
+}
+header.brand-name a::after {
+  content: "\203A";
+  margin-left: 5px;
+}
+
+.brand-logo {
+  color: white;
+  font-size: 40px; /* Increase font size */
+}
+
