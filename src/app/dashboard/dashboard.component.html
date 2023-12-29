@@ -15,7 +15,7 @@
         <section class="playlist-card">
             <h2 class="playlist-card-heading">1. Your tastes</h2>
             <p class="playlist-card-paragraphe">Choose a playlist that represents your tastes</p>
-            <section class="playlist-card-dropdown" ngDefaultControl>
+            <section class="playlist-card-dropdown">
                 <form class="form-with-space">
                     <select class="playlist-dropdown" #trainPlaylist>
                         @for (availablePlaylist of availablePlaylists; track availablePlaylist)
@@ -38,7 +38,7 @@
             <p class="playlist-card-paragraphe">Choose a playlist from which get recommendations</p>
             <section class="playlist-card-dropdown">
                 <form class="form-with-space">
-                    <select  class="playlist-dropdown" #testPlaylist  >
+                    <select  class="playlist-dropdown" #testPlaylist>
                         @for (availablePlaylist of availablePlaylists; track availablePlaylist)
                         {
                             @if (availablePlaylist.id == selectedPlaylists["test"])
