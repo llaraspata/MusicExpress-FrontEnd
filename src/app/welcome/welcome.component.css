@@ -1,0 +1,156 @@
+
+h1 {
+  font-size: 2.5rem;
+  color: var(--gray-900);
+  font-weight: 500;
+  line-height: 100%;
+  letter-spacing: -0.125rem;
+  margin: 0;
+}
+
+.content {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  width: 100%;
+  max-width: 400px;
+  margin-top: 1rem;
+  margin-left: 160px;
+}
+
+.content-description {
+  display: inline-block;
+  align-items: center; /* Center vertically */
+  width: 100%;
+  max-width: 800px;
+  margin-top: 3rem;
+}
+
+.content h1 {
+  margin-top: 1.75rem;
+}
+
+.content p {
+  margin-top: 1.5rem;
+}
+
+.divider {
+  width: 5px;
+  background: var(--accent-color);
+}
+
+h2 {
+  font-size: 2rem;
+  color: var(--secondary-color);
+  font-weight: 10;
+  line-height: 100%;
+  letter-spacing: -0.125rem;
+  margin: 0;
+}
+.content h2 {
+  margin-top: 1.75rem;
+}
+
+.steps-list {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.steps-list li {
+  counter-increment: custom-counter;
+  margin-bottom: 10px;
+}
+
+.steps-list li::before {
+  content: counter(custom-counter);
+  background-color: var(--primary-color); /* Green background */
+  color: var(--secondary-color); /* White text color */
+  font-weight: bold; /* Bold text */
+  display: inline-block;
+  width: 1.5em;
+  height: 1.5em;
+  line-height: 1.5em;
+  text-align: center;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+
+button {
+  padding: 8px 10px 8px 10px;
+  border: solid 1px var(--primary-color);
+  background: var(--primary-color);
+  color: white;
+  font-size: 1.0rem;
+  border-radius: 30px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+button:hover {
+  background-color:var(--hover-color);
+  border: solid 1px var(--hover-color);
+  color: white;
+}
+
+button:active {
+  background-color: var(--accent-color);
+  border: solid 1px var(--primary-color);
+  color: var(--primary-color);
+}
+
+.form-with-space {
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* Adjust the value as needed to control the spacing */
+}
+
+.extract-card-form {
+  align-items: center; /* Center vertically */
+  padding: 10px 30px 20px 30px;
+}
+
+.extract-form {
+  background: white;
+  border: 2px solid var(--primary-color);
+  font-size: 1.0rem;
+  border-radius: 0.5rem;
+}
+
+.extract-card {
+  align-items: center; /* Center vertically */
+  background: var(--extract-color);
+  border-radius: 30px;
+  padding-bottom: 30px;
+  width: 100%;
+}
+
+.extract-card-heading {
+  align-items: center; /* Center vertically */
+  color: var(--secondary-color);
+  padding: 0 0 0 30px;
+  font-weight: bold;
+}
+
+.extract-card-paragraphe {
+  align-items: center; /* Center vertically */
+  color: var(--description-color);
+  padding: 0 0 0 30px;
+  font-size: 1.0rem;
+}
+
+.description-heading {
+  display: flex;
+  align-items: center; /* Center vertically */
+  justify-content: center; /* Center horizontally */
+  color: var(--secondary-color);
+  padding: 0 0 10px 30px;
+  font-weight: bold;
+  font-size: 3.5rem;
+}
+
+.description-paragraphe {
+  display: flex;
+  align-items: center; /* Center vertically */
+  color: var(--description-color);
+  font-size: 1.0rem;
+}

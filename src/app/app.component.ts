@@ -1,11 +1,11 @@
-import {Component} from '@angular/core';
-import { ExtractPlaylistComponent } from './extract-playlist/extract-playlist.component';
-import {RouterLink, RouterOutlet} from '@angular/router';
+import { Component } from '@angular/core';
+import { WelcomeComponent } from './welcome/welcome.component';
+import { RouterLink, RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [ExtractPlaylistComponent, RouterLink, RouterOutlet],
+  imports: [WelcomeComponent, RouterLink, RouterOutlet],
   template: `
     <main>
       <header class="brand-name">

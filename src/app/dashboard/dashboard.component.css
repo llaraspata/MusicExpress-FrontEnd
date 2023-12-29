@@ -50,6 +50,34 @@ h2 {
   margin-top: 3.75rem;
 }
 
+.content-description {
+  display: flex;
+  align-items: center; /* Center vertically */
+  justify-content: center; /* Center horizontally */
+  width: 100%;
+  max-width: 700px;
+  margin-top: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+.description-heading {
+  display: flex;
+  align-items: center; /* Center vertically */
+  justify-content: center; /* Center horizontally */
+  color: var(--secondary-color);
+  padding: 0 0 25px 30px;
+  font-weight: bold;
+  font-size: 3.5rem;
+}
+
+.description-paragraphe {
+  display: flex;
+  align-items: center; /* Center vertically */
+  justify-content: center; /* Center horizontally */
+  color: var(--description-color);
+  font-size: 1.0rem;
+}
+
 button {
   padding: 8px 10px 8px 10px;
   border: solid 1px var(--primary-color);
@@ -72,12 +100,46 @@ button:active {
   color: var(--primary-color);
 }
 
+
 .form-with-space {
   display: flex;
   flex-direction: column;
   gap: 10px; /* Adjust the value as needed to control the spacing */
 }
 
+.extract-card-form {
+  align-items: center; /* Center vertically */
+  padding: 10px 30px 20px 30px;
+}
+
+.extract-form {
+  background: white;
+  border: 2px solid var(--primary-color);
+  font-size: 1.0rem;
+  border-radius: 0.5rem;
+}
+
+.extract-card {
+  align-items: center; /* Center vertically */
+  background: var(--extract-color);
+  border-radius: 30px;
+  padding-bottom: 10px;
+  width: 130%;
+}
+
+.extract-card-heading {
+  align-items: center; /* Center vertically */
+  color: var(--secondary-color);
+  padding: 20px 30px 0 30px;
+  font-weight: bold;
+}
+
+.extract-card-paragraphe {
+  align-items: center; /* Center vertically */
+  color: var(--description-color);
+  padding: 0 0 0 30px;
+  font-size: 1.0rem;
+}
 
 .playlist-card-form {
   align-items: center; /* Center vertically */
@@ -123,6 +185,11 @@ button:active {
   border: 2px solid var(--primary-color);
   font-size: 1.0rem;
   border-radius: 0.5rem;
+  width: auto;
+}
+
+.playlist-dropdown option {
+  width: auto;
 }
 
 .recommendation-card {
@@ -150,53 +217,28 @@ button:active {
 .recommendation-card-list {
   align-items: flex-start; /* Center vertically */
   list-style-type: none; /* Remove default list-style-type (disc) */
-  display: inline-block;
   color: white;
   padding: 30px 30px 0 30px;
   line-height: 100%;
   font-size: 1.5rem; 
 }
 
-.recommendation-card-checkbox {
-  margin-right: 10px;
-  list-style-type: none; /* Remove default list-style-type (disc) */
-  display: inline-block;
-  width: 30px;
-  height: 30px;
-  background-color: var(--primary-color);
-  border-radius: 50%;
-  text-align: center; /* Center the checkmark within the circle */
-  align-items: center; /* Center vertically */
-  color: white;
-  font-size: 14px;
-  line-height: 100%;
-}
-
-.recommendation-card-checkbox::before {
-  content: '\2713'; /* Unicode character for a checkmark */
-  font-size: 40px;
-  text-align: center; /* Center the checkmark within the circle */
-  align-items: center; /* Center vertically */
-}
-
 .recommendation-item {
   align-items: center; /* Center vertically */
-  display: inline-block;
+  display: block; /* Set display to block */
   margin-bottom: 20px;
 }
 
 .recommendation-item div {
-  display: inline-block;
+  margin-bottom: 20px;
 }
 
 .recommendation-item p {
   margin-top: 5px; /* Adjust the top margin as needed */
-  margin-left: 45px; /* Adjust the top margin as needed */
+  margin-left: 22px; /* Adjust the top margin as needed */
   color: #bbbbbb; /* Set the color as needed */
   font-size: 20px; /* Adjust the font size as needed */
 }
-
-
 
 .horizontal-divider {
   border-top: 1px solid var(--primary-color);
