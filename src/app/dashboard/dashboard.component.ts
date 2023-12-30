@@ -1,4 +1,4 @@
-import { ChangeDetectorRef, Component, ElementRef, ViewChild } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 import { Playlist } from '../playlist';
 import { RecommendedSong } from '../recommended-song';
 import { WelcomeComponent } from "../welcome/welcome.component";
@@ -40,7 +40,7 @@ export class DashboardComponent {
   songLikedStatus: { [songName: string]: boolean } = {};
 
 
-  constructor(private http: HttpClient, private cdr: ChangeDetectorRef) {
+  constructor(private http: HttpClient) {
     this.getAvailablePlaylists().subscribe((availablePlaylists: Playlist[]) => {
       console.log("Available playlists: ", availablePlaylists);
       this.availablePlaylists = availablePlaylists;
@@ -96,9 +96,6 @@ export class DashboardComponent {
           this.recommendedSongs.push({ name: song["Name"], artist: song["Artist"], preview: song["Preview"] });
           this.songLikedStatus[song["Name"]] = false;
         });
-
-        console.log("AFTER Recommended songs: ", this.recommendedSongs);
-        this.cdr.detectChanges();
       }
     });
   }
