@@ -1,11 +1,12 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { RouterLink, RouterOutlet } from '@angular/router';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [WelcomeComponent, RouterLink, RouterOutlet],
+  imports: [WelcomeComponent, RouterLink, RouterOutlet, HttpClientModule],
   template: `
     <main>
       <header class="brand-name">
@@ -20,4 +21,12 @@ import { RouterLink, RouterOutlet } from '@angular/router';
 })
 export class AppComponent {
   title = 'MusicExpress';
+  rootUrl = "http://localhost:8000"
+  http: HttpClient = inject(HttpClient);
+
+  constructor() {
+    this.http.get(this.rootUrl).subscribe((data) => {
+      console.log("ME-BE Data: ", data)
+    })
+  }
 }

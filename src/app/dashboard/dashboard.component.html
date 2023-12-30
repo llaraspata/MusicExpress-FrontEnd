@@ -20,7 +20,7 @@
                     <select class="playlist-dropdown" #trainPlaylist>
                         @for (availablePlaylist of availablePlaylists; track availablePlaylist)
                         {
-                            @if (availablePlaylist.id == selectedPlaylists["train"])
+                            @if (availablePlaylist.id == selectedPlaylists.id_playlist_train)
                             {
                                 <option value="{{ availablePlaylist.id }}" selected>{{ truncatePlaylistName(availablePlaylist.name) }}</option>
                             }
@@ -41,7 +41,7 @@
                     <select  class="playlist-dropdown" #testPlaylist>
                         @for (availablePlaylist of availablePlaylists; track availablePlaylist)
                         {
-                            @if (availablePlaylist.id == selectedPlaylists["test"])
+                            @if (availablePlaylist.id == selectedPlaylists.id_playlist_test)
                             {
                                 <option value="{{ availablePlaylist.id }}" selected>{{ truncatePlaylistName(availablePlaylist.name) }}</option>
                             }
@@ -60,11 +60,22 @@
     <div class="right-side">
         <section class="recommendation-card">
             <h2 class="recommendation-card-heading">3. Recommended songs</h2>
-            <p class="recommendation-card-paragraphe">Select the songs you liked</p>
-            <ul class="recommendation-card-list">
+
+            @if(recommendedSongs.length == 0)
+            {
+                <p class="recommendation-card-paragraphe">
+                    No recommendations yet.
+                    <br>
+                    Please, select the playlists you want to use.
+                </p>
+            }
+            @else {
+                <p class="recommendation-card-paragraphe">Select the songs you liked</p>
+            }
+            <ul class="recommendation-card-list" #recs>
                 @for (recommendedSong of recommendedSongs; track recommendedSong)
                 {
-                    <li class="recommendation-item" value="{{ recommendedSong }}">
+                    <li class="recommendation-item" value="{{ recommendedSong.name }}">
                         <div>
                             <mat-checkbox style="color: #1DB954; margin-right: 20px;" (click)="countLiked(recommendedSong.name)">
                                 <span style="color: white;">{{ recommendedSong.name }}</span>
@@ -76,7 +87,10 @@
                 }
             </ul>
             
-            <h2 class="recommendation-card-accuracy">Accuracy: <span style="color: white;">{{ accuracy }}%</span></h2>
+            @if(recommendedSongs.length != 0) {
+                <h2 class="recommendation-card-accuracy">Accuracy: <span style="color: white;">{{ accuracy }}%</span></h2>
+            }
+            
         </section>
     </div>
 </div>
