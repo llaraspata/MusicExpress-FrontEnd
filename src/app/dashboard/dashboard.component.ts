@@ -87,6 +87,7 @@ export class DashboardComponent {
     this.selectedPlaylists.id_playlist_test = this.testPlaylist?.nativeElement.value;
 
     console.log("Selected playlists: ", this.selectedPlaylists);
+    this.recommendedSongs = [];
 
     this.postRecommendedSongs(this.selectedPlaylists).subscribe((songs: any) => {
       if (songs.data && songs.data.length > 0) {
