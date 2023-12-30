@@ -17,6 +17,7 @@ body {
   --accent-color: #e7fae8;
   --shadow-color: #E8E8E8;
   --extract-color: #edf1ee;
+  --error-color: #be1c1c;
 }
 
 button.primary {

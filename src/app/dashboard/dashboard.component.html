@@ -1,15 +1,25 @@
 <app-welcome></app-welcome>
+
 <div class="content">
     <div class="left-side">
         <section class="extract-card">
             <h2 class="extract-card-heading">0. Extract playlists</h2>
             <p class="extract-card-paragraphe">Insert the id of the playlist to extract its data</p>
+
+            @if(isExtracting) {
+                <mat-progress-bar mode="query" class="dashboard-progress-bar"></mat-progress-bar>
+            }
+
             <section class="extract-card-form">
                 <form class="form-with-space">
                     <input class="extract-form" type="text" placeholder="Playlist's id" #extract />
                     <button class="primary" type="button" (click)="extractPlaylist()">Extract</button>
                 </form>
             </section>
+            @if(hasExtracted) {
+                <p class="success-message" style="margin-top: 0;">Playlist extracted!</p>
+            }
+            
         </section>
 
         <section class="playlist-card">
@@ -31,6 +41,9 @@
                     </select>
                 </form>
             </section>
+            @if(idsAreEqual) {
+                <p class="error-message" style="margin-top: 20px;">Please, select two different playlists</p>
+            }
         </section>
         
         <section class="playlist-card">
@@ -54,7 +67,12 @@
                 <button class="primary" type="button" (click)="getRecommedation()">Get recommendations!</button>                    
                 </form>
             </section>
+            @if(idsAreEqual) {
+                <p class="error-message" style="margin-top: 20px;">Please, select two different playlists</p>
+            }
         </section>
+
+
     </div>
 
     <div class="right-side">
@@ -63,11 +81,19 @@
 
             @if(recommendedSongs.length == 0)
             {
-                <p class="recommendation-card-paragraphe">
-                    No recommendations yet.
-                    <br>
-                    Please, select the playlists you want to use.
-                </p>
+                @if (isRecommending) {
+                    <p class="recommendation-card-paragraphe">
+                        ✨Magic in progress✨
+                    </p>
+                    <mat-progress-bar mode="query" class="dashboard-progress-bar"></mat-progress-bar>
+                }
+                @else {
+                    <p class="recommendation-card-paragraphe">
+                        No recommendations yet.
+                        <br>
+                        Please, select the playlists you want to use.
+                    </p>
+                }
             }
             @else {
                 <p class="recommendation-card-paragraphe">Select the songs you liked</p>

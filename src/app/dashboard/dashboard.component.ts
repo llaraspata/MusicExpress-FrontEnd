@@ -3,6 +3,7 @@ import { Playlist } from '../playlist';
 import { RecommendedSong } from '../recommended-song';
 import { WelcomeComponent } from "../welcome/welcome.component";
 import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { PlaylistsPayload } from '../playlists-payload';
 
@@ -11,7 +12,7 @@ import { PlaylistsPayload } from '../playlists-payload';
     standalone: true,
     templateUrl: './dashboard.component.html',
     styleUrl: './dashboard.component.css',
-    imports: [MatCheckboxModule, WelcomeComponent, HttpClientModule]
+    imports: [MatCheckboxModule, MatProgressBarModule, WelcomeComponent, HttpClientModule]
 })
 
 export class DashboardComponent {
@@ -34,6 +35,12 @@ export class DashboardComponent {
     id_playlist_train: "3fSsw9Mp5Mi2DDiweZggtP",
     id_playlist_test: "2YRe7HRKNRvXdJBp9nXFza"
   };
+
+  isExtracting: boolean = false;
+  isRecommending: boolean = false;
+
+  hasExtracted: boolean = false;
+  idsAreEqual: boolean = false;
   
   recommendedSongs: RecommendedSong[] = [];
   accuracy: number = 0;
@@ -55,6 +62,7 @@ export class DashboardComponent {
 
 
   extractPlaylist() {
+    this.isExtracting = true;
     let playlistId = this.extract?.nativeElement.value;
 
     this.postExtractPlaylist(playlistId).subscribe((playlistNames: any) => {
@@ -67,6 +75,9 @@ export class DashboardComponent {
           this.availablePlaylists.push({ id: playlistId, name: playlistNames.data[0] });
         }
       }
+
+      this.isExtracting = false;
+      this.hasExtracted = true;
     });
   }
 
@@ -83,8 +94,16 @@ export class DashboardComponent {
 
 
   getRecommedation() {
+    this.isRecommending = true;
+
     this.selectedPlaylists.id_playlist_train = this.trainPlaylist?.nativeElement.value;
     this.selectedPlaylists.id_playlist_test = this.testPlaylist?.nativeElement.value;
+
+    if (this.selectedPlaylists.id_playlist_train === this.selectedPlaylists.id_playlist_test) {
+      this.idsAreEqual = true;
+      this.isRecommending = false;
+      return;
+    }
 
     console.log("Selected playlists: ", this.selectedPlaylists);
     this.recommendedSongs = [];
@@ -98,6 +117,8 @@ export class DashboardComponent {
           this.songLikedStatus[song["Name"]] = false;
         });
       }
+
+      this.isRecommending = false;
     });
   }
 
@@ -111,6 +132,8 @@ export class DashboardComponent {
       jsonPayload["id_playlist_train"] = selectedPlaylists.id_playlist_train;
       jsonPayload["id_playlist_test"] = selectedPlaylists.id_playlist_test;
     }
+
+    console.log("jsonPayload: ", jsonPayload);
      
     return this.http.post(this.postRecommendedSongsUrl, jsonPayload);
   }
