@@ -1,27 +1,52 @@
-# MusicExpressFrontEnd
+# MusicExpress FrontEnd
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.7.
+<p align="center">
+  <img src="figures/footer-logo.png" alt="logo">
+</p>
 
-## Development server
+This is the Front-End repository for [MusicExpress Recommender System](http://musicexpress.azurewebsites.net).
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+The goal of this system is to easily provide music suggestions to different users, considering a couple of playlists: one representing the user's tastes, and the other from which take the recommendations.
 
-## Code scaffolding
+> [!NOTE]
+> Complete information about how the recommender system works can be found on the [MusicExpress's GitHub repository](https://github.com/se4ai2324-uniba/MusicExpress.git).
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Below there is a screen-shot of the system:
 
-## Build
+![Dahboard](/figures/ME-dashboard.png)
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Run on local environment
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.7, so be sure that it's installed on your machine.
 
-## Running end-to-end tests
+### Install project dependencies
+After installing the proper Angular version, it's necessary to install the project dependencies. 
+So, run the following command in the project folder:
+```bash
+npm install
+```
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+### Run the local server
+Finally, you can run it executing the following command in the project folder:
+```bash
+ng serve
+```
+Navigate to `http://localhost:4200/` and **enjoy the sound!**
 
-## Further help
+> [!NOTE]
+> The application will automatically reload if you change any of the source files.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+## Citation
+
+```bibtex
+@misc{MusicRecommendationUsingClusters,
+author = {Rinaldi Ivan and, de Benedictis Salvatore and, Sibilla Antonio and, Laraspata Lucrezia},
+title = {Music Recommendation using the K-Medoids Clustering Model},
+month = {October},
+year = {2023},
+model_url = {https://github.com/se4ai2324-uniba/MusicExpress},
+frontend_url = {https://github.com/llaraspata/MusicExpress-FrontEnd.git}
+}
+```
