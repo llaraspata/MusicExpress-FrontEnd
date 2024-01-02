@@ -20,7 +20,7 @@ export class DashboardComponent {
   @ViewChild("trainPlaylist", { static: false }) trainPlaylist?: ElementRef;
   @ViewChild("testPlaylist", { static: false }) testPlaylist?: ElementRef;
 
-  private getAvailablePlaylistsUrl = 'http://localhost:3000/playlists';
+  private getAvailablePlaylistsUrl = 'http://localhost:8000/available_playlists';
   private postRecommendedSongsUrl = 'http://localhost:8000/recommendation';
   private postExtractPlaylistUrl = 'http://localhost:8000/extract';
 
@@ -48,16 +48,22 @@ export class DashboardComponent {
 
 
   constructor(private http: HttpClient) {
-    this.getAvailablePlaylists().subscribe((availablePlaylists: Playlist[]) => {
-      console.log("Available playlists: ", availablePlaylists);
-      this.availablePlaylists = availablePlaylists;
+    this.getAvailablePlaylists().subscribe((availablePlaylists: any) => {
+
+      if (availablePlaylists.data && availablePlaylists.data.length > 0) {
+        availablePlaylists.data.forEach((playlist: any) => {
+          this.availablePlaylists.push({ id: playlist["Id"], name: playlist["Name"] });
+        });
+      }
+
+      console.log("Available playlists: ", this.availablePlaylists);
     });
   }
 
 
   getAvailablePlaylists() {
     console.log("Getting available playlists...");
-    return this.http.get<Playlist[]>(this.getAvailablePlaylistsUrl);
+    return this.http.get(this.getAvailablePlaylistsUrl);
   }
 
 
