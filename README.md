@@ -11,28 +11,33 @@ The goal of this system is to easily provide music suggestions to different user
 > [!NOTE]
 > Complete information about how the recommender system works can be found on the [MusicExpress's GitHub repository](https://github.com/se4ai2324-uniba/MusicExpress.git).
 
-Below there is a screen-shot of the system:
+Below there is a screenshot of the system:
 
 ![Dahboard](/figures/ME-dashboard.png)
 
 
 
 ## Run on local environment
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.7, so be sure that it's installed on your machine.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.7.
+
+> [!IMPORTANT]
+> Be sure that Angular is installed on your machine.
+> You can find details on how to install it in the [Angular Github repository](https://github.com/angular/angular-cli).
 
 ### Install project dependencies
-After installing the proper Angular version, it's necessary to install the project dependencies. 
-So, run the following command in the project folder:
+After installing the proper Angular version, run the following command - in the project folder - to install the project dependencies. 
+
 ```bash
 npm install
 ```
 
 ### Run the local server
-Finally, you can run it executing the following command in the project folder:
+Finally, run the following command - in the project folder - to access the **Music Express Front-End**:
+
 ```bash
 ng serve
 ```
-Navigate to `http://localhost:4200/` and **enjoy the sound!**
+Navigate to `http://localhost:4200/` and **_enjoy the sound!_**
 
 > [!NOTE]
 > The application will automatically reload if you change any of the source files.
