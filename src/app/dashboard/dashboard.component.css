@@ -141,6 +141,22 @@ button:active {
   font-size: 1.0rem;
 }
 
+.success-message {
+  color: var(--primary-color);
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  font-size: 1.0rem;
+}
+
+.error-message {
+  color: var(--error-color);
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  font-size: 1.0rem;
+}
+
 .playlist-card-form {
   align-items: center; /* Center vertically */
   padding: 10px 30px 20px 30px;
@@ -157,7 +173,7 @@ button:active {
   align-items: center; /* Center vertically */
   background: var(--accent-color);
   border-radius: 30px;
-  padding-bottom: 30px;
+  padding-bottom: 10px;
   width: 130%;
 }
 
@@ -177,7 +193,7 @@ button:active {
 
 .playlist-card-dropdown {
   align-items: center; /* Center vertically */
-  padding: 10px 30px 0 30px;
+  padding: 10px 30px 20px 30px;
 }
 
 .playlist-dropdown {
@@ -190,6 +206,17 @@ button:active {
 
 .playlist-dropdown option {
   width: auto;
+}
+
+.dashboard-progress-bar {
+  height: 10px;
+  color: var(--primary-color);
+  padding-right: 0px;
+  padding-top: 0px;
+  margin-top: 15px;
+  margin-left: 30px;
+  margin-right: 0px;
+  width: 84%;
 }
 
 .recommendation-card {

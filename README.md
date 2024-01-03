@@ -1,27 +1,57 @@
-# MusicExpressFrontEnd
+# MusicExpress FrontEnd
 
+<p align="center">
+  <img src="figures/footer-logo.png" alt="logo">
+</p>
+
+This is the Front-End repository for [MusicExpress Recommender System](http://musicexpress.azurewebsites.net).
+
+The goal of this system is to easily provide music suggestions to different users, considering a couple of playlists: one representing the user's tastes, and the other from which take the recommendations.
+
+> [!NOTE]
+> Complete information about how the recommender system works can be found on the [MusicExpress's GitHub repository](https://github.com/se4ai2324-uniba/MusicExpress.git).
+
+Below there is a screenshot of the system:
+
+![Dahboard](/figures/ME-dashboard.png)
+
+
+
+## Run on local environment
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.7.
 
-## Development server
+> [!IMPORTANT]
+> Be sure that Angular is installed on your machine.
+> You can find details on how to install it in the [Angular Github repository](https://github.com/angular/angular-cli).
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+### Install project dependencies
+After installing the proper Angular version, run the following command - in the project folder - to install the project dependencies. 
 
-## Code scaffolding
+```bash
+npm install
+```
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### Run the local server
+Finally, run the following command - in the project folder - to access the **Music Express Front-End**:
 
-## Build
+```bash
+ng serve
+```
+Navigate to `http://localhost:4200/` and **_enjoy the sound!_**
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+> [!NOTE]
+> The application will automatically reload if you change any of the source files.
 
-## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Citation
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+```bibtex
+@misc{MusicRecommendationUsingClusters,
+author = {Rinaldi Ivan and, de Benedictis Salvatore and, Sibilla Antonio and, Laraspata Lucrezia},
+title = {Music Recommendation using the K-Medoids Clustering Model},
+month = {October},
+year = {2023},
+model_url = {https://github.com/se4ai2324-uniba/MusicExpress},
+frontend_url = {https://github.com/llaraspata/MusicExpress-FrontEnd.git}
+}
+```

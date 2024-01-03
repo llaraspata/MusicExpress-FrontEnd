@@ -1,5 +1,4 @@
 export interface PlaylistsPayload {
-    trainId: string;
-    testId: string;
-  }
-  
+  id_playlist_train: string,
+  id_playlist_test: string
+}
