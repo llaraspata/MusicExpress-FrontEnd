@@ -43,6 +43,7 @@ export class DashboardComponent {
   isExtracting: boolean = false;
   isRecommending: boolean = false;
 
+  noIdToExtract: boolean = false;
   hasExtracted: boolean = false;
   idsAreEqual: boolean = false;
   
@@ -72,6 +73,11 @@ export class DashboardComponent {
 
 
   extractPlaylist() {
+    if (!this.extract?.nativeElement.value) {
+      this.noIdToExtract = true;
+      return;
+    }
+    
     this.isExtracting = true;
     let playlistId = this.extract?.nativeElement.value;
 

@@ -19,6 +19,9 @@
             @if(hasExtracted) {
                 <p class="success-message" style="margin-top: 0;">Playlist extracted!</p>
             }
+            @if(noIdToExtract) {
+                <p class="error-message" style="margin-top: 20px;">Please, provide a playlist id to extract.</p>
+            }
             
         </section>
 
