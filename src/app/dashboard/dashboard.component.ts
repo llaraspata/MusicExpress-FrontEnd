@@ -20,13 +20,13 @@ export class DashboardComponent {
   @ViewChild("trainPlaylist", { static: false }) trainPlaylist?: ElementRef;
   @ViewChild("testPlaylist", { static: false }) testPlaylist?: ElementRef;
 
-  /*private getAvailablePlaylistsUrl = 'https://musicexpress.azurewebsites.net:8000/available_playlists';
-  private postRecommendedSongsUrl = 'https://musicexpress.azurewebsites.net:8000/recommendation';
-  private postExtractPlaylistUrl = 'https://musicexpress.azurewebsites.net:8000/extract';*/
+  /*private getAvailablePlaylistsUrl = 'https://musicexpress.azurewebsites.net/available_playlists';
+  private postRecommendedSongsUrl = 'https://musicexpress.azurewebsites.net/recommendation';
+  private postExtractPlaylistUrl = 'https://musicexpress.azurewebsites.net/extract';*/
 
-  private getAvailablePlaylistsUrl = 'https://stagingmusicexpress.azurewebsites.net:8000/available_playlists';
-  private postRecommendedSongsUrl = 'https://stagingmusicexpress.azurewebsites.net:8000/recommendation';
-  private postExtractPlaylistUrl = 'https://stagingmusicexpress.azurewebsites.net:8000/extract';
+  private getAvailablePlaylistsUrl = 'https://stagingmusicexpress.azurewebsites.net/available_playlists';
+  private postRecommendedSongsUrl = 'https://stagingmusicexpress.azurewebsites.net/recommendation';
+  private postExtractPlaylistUrl = 'https://stagingmusicexpress.azurewebsites.net/extract';
 
   availablePlaylists: Playlist[] = [];
 
